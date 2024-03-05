@@ -23,8 +23,9 @@ while True:
 
 toplamSaniye = ((saat * 60) * 60) + (dakika * 60) + saniye
 
-onay = input(f"\nBilgisayarınız {saat}:{dakika}:{saniye} [{toplamSaniye} saniye] sonra kapatılacak onaylıyor musunuz?: (Y/N)").upper()
-if(onay == "Y"):
+print("Reddetmek için rastgele bir şey yazabilirsiniz.")
+onay = input(f"\nBilgisayarınız {saat}:{dakika}:{saniye} [{toplamSaniye} saniye] sonra kapatılacak onaylıyor musunuz? (ONAY): ").upper()
+if(onay == "ONAY"):
     time.sleep(toplamSaniye)
     os.system("shutdown /s /t 1")
 else:
